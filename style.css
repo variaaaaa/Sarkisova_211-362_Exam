@@ -7,6 +7,50 @@
     --color-gray: #7d7d7b;
   }
 
+  /* ========================== Gallery ==========================*/
+.gallery__title {
+    margin-top: 20px;
+    margin-left: 35%;
+    color: rgb(233, 148, 68);
+    font-size: 46px;
+    margin-bottom: 50px;
+  }
+  
+  .gallery__title::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 150px;
+    height: 3px;
+    background-color: rgb(153, 108, 162);
+  }
+  
+  .gallery-images__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .gallery__item {
+    text-align: center;
+    width: 31%;
+    height: 300px;
+    margin: 10px;
+  }
+  
+  .gallery__image {
+    transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+  }
+  
+  .gallery__item img:hover {
+    width: 270px;
+    height: 270px;
+  }
+
   .btn-theme {
     background-color: var(#59bafb);
     color: var(#fffdf5);
