@@ -1,6 +1,5 @@
 <?php
 require_once ('connectdb.php'); // For storing username and password.
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +11,6 @@ require_once ('connectdb.php'); // For storing username and password.
 </head>
 <body>
 <body>
-<header class="header" id="top">
-    
-</header>
 <?php
 require('connectdb.php');
 // If form submitted, insert values into the database.
@@ -26,7 +22,7 @@ if (isset($_REQUEST['user'])){
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
 	
-    $query = "INSERT into `Users` (user, password)
+    $query = "INSERT into `Users` (use, password)
 VALUES ('$username', '".md5($password)."')";
         $result = mysqli_query($con,$query);
         if($result){
@@ -37,7 +33,7 @@ VALUES ('$username', '".md5($password)."')";
 <div class="form">
 <form name="registration" action="" method="post">
             <h3 class="h3">Регистрация</h3>
-            <label for="username">Логин</label>
+            <label for="user">Логин</label>
             <input type="text" name="username" placeholder="Введите логин" required />
             <label for="password">Пароль</label>
             <input type="password" name="password"  placeholder="Придумайте пароль" id="password" required/>
